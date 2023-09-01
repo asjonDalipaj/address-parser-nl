@@ -93,7 +93,7 @@ tag_list=["straatTag","huisnummerTag","huisletterTag","huistoevoegingTag","postc
 # Read the training dataset into pandas
 # df_train=pd.read_csv(filepath_or_buffer="./corpus/dataset/us-train-dataset.csv",sep=",",dtype=str)
 df_train = pd.read_csv(r'corpus/dataset/distinct_addresses.csv',sep=",",dtype=str)
-df_train = df_train.sample(n=300, replace = False)
+df_train = df_train.sample(n=600, replace = False)
 # print(df_train)
 
 # Get entity spans
@@ -110,7 +110,7 @@ doc_bin_train.to_disk("./corpus/spacy-docbins/train.spacy")
 # Read the validation dataset into pandas
 # df_test=pd.read_csv(filepath_or_buffer="./corpus/dataset/us-test-dataset.csv",sep=",",dtype=str)
 df_test = pd.read_csv(r'corpus/dataset/distinct_addresses.csv',sep=",",dtype=str)
-df_test = df_test.sample(n=50, replace = False)
+df_test = df_test.sample(n=100, replace = False)
 # print(df_test)
 
 # Get entity spans
